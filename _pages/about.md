@@ -8,8 +8,8 @@ redirect_from:
 ---
 
 <blockquote>
-<p style='text-align: justify;'
-> I’m a <b>computational biologist</b> and <b>data scientist</b> with a Ph.D. from Northwestern University, specializing in single-cell and high-throughput genomic data analysis. My expertise spans gene therapy development and macrophage immunity. I excel at developing innovative solutions to complex biological problems, including custom pipelines, ad hoc tools, and web-based applications, using both Python and R.
+<p style='text-align: justify;'> 
+I’m a <b>computational biologist</b> and <b>data scientist</b> with a Ph.D. from Northwestern University, specializing in single-cell and high-throughput genomic data analysis. My expertise spans gene therapy development and macrophage immunity. I excel at developing innovative solutions to complex biological problems, including custom pipelines, ad hoc tools, and web-based applications, using both Python and R.
 </p></blockquote>
 
 <a href="/files/pdf/resume_2025.pdf" download class="btn btn-info" style="float: right;">
