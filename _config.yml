@@ -306,7 +306,6 @@ plugins:
   - jekyll-redirect-from
   - jemoji
   - jekyll-pdf-embed
-  - jekyll-jupyter-notebook
 
 # Mimic GitHub Pages with --safe
 whitelist:
