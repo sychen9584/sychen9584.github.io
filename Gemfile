@@ -8,6 +8,7 @@ group :jekyll_plugins do
   gem 'jemoji'
   gem 'webrick', '~> 1.8'
   gem "jekyll-pdf-embed"
+  gem "jekyll-jupyter-notebook"
 end
 
 gem 'github-pages'

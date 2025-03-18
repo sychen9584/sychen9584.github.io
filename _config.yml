@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "dark"
+site_theme               : "default"
 title                    : "Shang-Yang (Sam) Chen"
 title_separator          : "-"
 name                     : &name "Sam Chen"
@@ -306,6 +306,7 @@ plugins:
   - jekyll-redirect-from
   - jemoji
   - jekyll-pdf-embed
+  - jekyll-jupyter-notebook
 
 # Mimic GitHub Pages with --safe
 whitelist:
