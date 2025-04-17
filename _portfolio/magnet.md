@@ -1,6 +1,6 @@
 ---
 title: "MAGNET - Macrophage Annotation of Gene Network Enrichment Tool 🧲"
-excerpt: "<img src='/images/magnet.png' width='35%' height='35%'><br/><br/> An interactive web application for performing enrichment analyses on gene sets that are specifically relevant to macrophages. <br/>"
+excerpt: "<img src='/images/magnet.png' width='40%' height='40%'><br/><br/> An interactive web application for performing enrichment analyses on gene sets that are specifically relevant to macrophages. <br/>"
 collection: portfolio
 ---
 

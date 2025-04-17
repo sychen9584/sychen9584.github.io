@@ -9,7 +9,7 @@ redirect_from:
 
 <blockquote>
 <p style='text-align: justify;'> 
-I’m a <b>computational biologist</b> and <b>data scientist</b> with a Ph.D. from Northwestern University, specializing in single-cell and high-throughput genomic data analysis. My expertise spans gene therapy development and macrophage immunity. I excel at developing innovative solutions to complex biological problems, including custom pipelines, ad hoc tools, and web-based applications, using both Python and R.
+I’m a <b>computational biologist</b> and <b>data scientist</b> specializing in single-cell and high-throughput genomic data analysis. My expertise spans gene therapy development and macrophage immunity. I excel at developing innovative solutions to complex biological problems, including custom pipelines, ad hoc tools, and web-based applications, using both Python and R.
 </p></blockquote>
 
 <a href="/files/pdf/resume_2025.pdf" download class="btn btn-info" style="float: right;">
@@ -47,6 +47,10 @@ I’m a <b>computational biologist</b> and <b>data scientist</b> with a Ph.D. fr
   ![Static Badge](https://img.shields.io/badge/ggplot2-%23118ab2?style=for-the-badge)
   ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
   ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+  ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+  ![Static Badge](https://img.shields.io/badge/Nextflow-%230dc09d?style=for-the-badge&logo=Nextflow&logoColor=white)
+
+
 
 ## Work Experience
   - <i>**Scientist I/II, Computational Science**</i> &ensp;&ensp; Dyno Therapeutics &ensp; 2022-2024   
@@ -54,3 +58,4 @@ I’m a <b>computational biologist</b> and <b>data scientist</b> with a Ph.D. fr
 
 ## Education
   - <i>**PhD in Biomedical Informatics**</i> &ensp;&ensp; Northwestern University &ensp; 2016-2022
+  - <i>**BS in Biochemistry <br/> with minor in Information Systems**</i> &ensp;&ensp; Stony Brook University &ensp; 2012-2016
