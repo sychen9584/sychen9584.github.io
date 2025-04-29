@@ -7,4 +7,4 @@ redirect_from:
   - /resume
 ---
 
- {% pdf "/files/pdf/CV_2025.pdf" no_link %}
+ {% pdf "/files/pdf/CV_SYC_4.21.25.pdf" no_link %}
