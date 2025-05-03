@@ -1,6 +1,6 @@
 ---
 title: 'Building a RAG-Powered AI Chatbot for Single-Cell Analysis - Part 2: Data Ingestion & Indexing'
-date: 2025-05-03
+date: 2025-05-02
 permalink: /posts/2025/05/rag-part2/
 tags:
   - bioinformatics
