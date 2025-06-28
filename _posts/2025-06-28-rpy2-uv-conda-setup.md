@@ -7,8 +7,9 @@ tags:
   - datascience
 ---
 
-# Introduction
-When doing bioinformatics analysis using a Python workstack, it is quite common that crucial software packages are implemented only in R. This language divide often complicates reproducibility and development when trying to integrate R-based methods into Python-centric workflows. Technically, *mamba*, a next-gen reimplementation of *conda* in C++ can manage both Python and R ecosystems in a unified Conda environment. However, *uv* has quickly become the gold standard for managing Python projects thanks to its speed and precision, and it's often good practice to isolate language-specific environments for better reproducibility and fewer conflicts.
+When doing bioinformatics analysis using a Python workstack, it is quite common that crucial software packages are implemented only in R.
+
+This language divide often complicates reproducibility and development when trying to integrate R-based methods into Python-centric workflows. Technically, *mamba*, a next-gen reimplementation of *conda* in C++ can manage both Python and R ecosystems in a unified Conda environment. However, *uv* has quickly become the gold standard for managing Python projects thanks to its speed and precision, and it's often good practice to isolate language-specific environments for better reproducibility and fewer conflicts.
 
 In this post, we’ll walk through a clean setup for combining *rpy2*, *uv*, and *mamba* inside a Jupyter Notebook. This lets you run R code from Python seamlessly, leverage both ecosystems in a single workflow, and keep your environments modular and maintainable.
 
