@@ -1,5 +1,5 @@
 ---
-title: 'Bridging R and Python in Bioinformatics: A Practical Setup with rpy2, uv, and mamba in Jupyter Notebooks
+title: 'Bridging R and Python in Bioinformatics: A Practical Setup with rpy2, uv, and mamba in Jupyter Notebooks'
 date: 2025-06-28
 permalink: /posts/2025/06/rpy2/
 tags:
