@@ -12,7 +12,7 @@ redirect_from:
 I’m a <b>computational biologist</b> and <b>data scientist</b> specializing in single-cell and high-throughput genomic data analysis. My expertise spans gene therapy development and macrophage immunity. I excel at developing innovative solutions to complex biological problems, including custom pipelines, ad hoc tools, and web-based applications, using both Python and R.
 </p></blockquote>
 
-<a href="/files/pdf/sam_chen_resume_4.21.25.pdf" download class="btn btn-info" style="float: right;">
+<a href="/files/pdf/sam_chen_resume_bioinfo.pdf" download class="btn btn-info" style="float: right;">
     📄 Download Resume
 </a>
 
