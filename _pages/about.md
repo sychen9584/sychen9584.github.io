@@ -53,9 +53,15 @@ I’m a <b>computational biologist</b> and <b>data scientist</b> specializing in
 
 
 ## Work Experience
-  - <i>**Scientist I/II, Computational Science**</i> &ensp;&ensp; Dyno Therapeutics &ensp; 2022-2024   
-  - <i>**Bioinformatics Intern, Oncology Informatics**</i> &ensp;&ensp; Genentech &ensp; 2021-2022 
+<ul style='text-align: justify; text-justify: inter-word;'>
+  <li><i><strong>Bioinformatics Scientist II, Brain Tumor Institute</strong></i> <br/> Children's National Hospital &ensp; 2025-present</li>
+  <li><i><strong>Scientist I/II, Computational Science</strong></i> <br/> Dyno Therapeutics &ensp; 2022-2024</li>
+  <li><i><strong>Bioinformatics Intern, Oncology Informatics</strong></i> <br/> Genentech &ensp; 2021-2022</li>
+</ul>
 
 ## Education
-  - <i>**PhD in Biomedical Informatics**</i> &ensp;&ensp; Northwestern University &ensp; 2016-2022
-  - <i>**BS in Biochemistry <br/> with minor in Information Systems**</i> &ensp;&ensp; Stony Brook University &ensp; 2012-2016
+<ul style='text-align: justify; text-justify: inter-word;'>
+  <li><i><strong>PhD in Computational Biology</strong></i> <br/> Northwestern University &ensp; 2016-2022</li>
+  <li><i><strong>MS in Computer Science</strong></i> <br/> Georgia Institute of Technology &ensp; 2026-present</li>
+  <li><i><strong>BS in Biochemistry with minor in Information Systems</strong></i> <br/> Stony Brook University &ensp; 2012-2016</li>
+</ul>
