@@ -1,0 +1,17 @@
+---
+layout: archive
+---
+
+{% include base_path %}
+
+<div class="tag-page-header">
+  <a href="{{ base_path }}/tags/" class="tag-page__back">&#8592; All Tags</a>
+  <span class="tech-chip tag-page__chip">{{ page.tag }}</span>
+  <span class="tag-page__count">{{ page.posts | size }} post{% if page.posts.size != 1 %}s{% endif %}</span>
+</div>
+
+<div class="entries-list">
+  {% for post in page.posts %}
+    {% include archive-single.html context="blog" type="list" %}
+  {% endfor %}
+</div>

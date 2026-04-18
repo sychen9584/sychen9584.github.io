@@ -72,6 +72,7 @@
     color: var(--chip-text);
     background: var(--chip-bg);
     border-radius: 999px;
+    text-decoration: none;
     transition: $global-transition;
 
     i {

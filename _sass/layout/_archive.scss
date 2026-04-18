@@ -482,3 +482,67 @@
     transform: translateX(2px);
   }
 }
+
+/*
+   Tag cloud (tags index page)
+   ========================================================================== */
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+  margin-top: 1.5em;
+
+  .tag-cloud__item {
+    cursor: pointer;
+  }
+
+  .tag-cloud__count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.4em;
+    height: 1.4em;
+    padding: 0 0.35em;
+    font-size: 0.78em;
+    font-weight: 700;
+    background: var(--chip-accent, #2f7f93);
+    color: #fff;
+    border-radius: 999px;
+    margin-left: 0.2em;
+  }
+}
+
+/*
+   Tag page header
+   ========================================================================== */
+
+.tag-page-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  margin-bottom: 1.5em;
+  flex-wrap: wrap;
+
+  .tag-page__back {
+    font-size: 0.88em;
+    font-weight: 500;
+    color: var(--global-link-color);
+    text-decoration: none;
+
+    &:hover { text-decoration: underline; }
+  }
+
+  .tag-page__chip {
+    cursor: default;
+    font-size: 1em;
+    pointer-events: none;
+  }
+
+  .tag-page__count {
+    font-size: 0.88em;
+    color: var(--global-text-color);
+    opacity: 0.65;
+  }
+}
+
