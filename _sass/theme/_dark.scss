@@ -49,4 +49,12 @@ $sidebar-screen-min-width   : 1024px;
     --global-text-color                 : #{$text};
     --global-text-color-light           : #{$light-gray};
     --global-thead-color                : #{$background-lighter};
+
+    /* Homepage component tokens (tuned for contrast) */
+    --chip-bg                           : #5a616b;
+    --chip-bg-hover                     : #6b727d;
+    --chip-text                         : #ffffff;
+    --chip-accent                       : #{$link-light};
+    --timeline-rail                     : #6d757e;
+    --text-muted                        : #b8bdc2;
 }
