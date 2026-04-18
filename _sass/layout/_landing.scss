@@ -1,0 +1,306 @@
+/* ==========================================================================
+   LANDING PAGE
+   Full-width hero + navigation card grid for the home splash page.
+   ========================================================================== */
+
+/* Token defaults — shadow theme tokens without editing _default.scss / _dark.scss */
+:root {
+    --landing-card-bg           : #f7f9fa;
+    --landing-card-bg-hover     : #edf2f4;
+    --landing-card-border       : #c4cad0;
+    --landing-card-shadow       : rgba(0, 0, 0, 0.06);
+    --landing-card-shadow-hover : rgba(0, 0, 0, 0.14);
+    --landing-card-icon-color   : #2f7f93;
+    --landing-hero-rule         : rgba(47, 127, 147, 0.18);
+}
+
+[data-theme="dark"] {
+    --landing-card-bg           : #525a63;
+    --landing-card-bg-hover     : #5d666f;
+    --landing-card-border       : #6d757e;
+    --landing-card-shadow       : rgba(0, 0, 0, 0.22);
+    --landing-card-shadow-hover : rgba(0, 0, 0, 0.38);
+    --landing-card-icon-color   : #0ea1c5;
+    --landing-hero-rule         : rgba(14, 161, 197, 0.28);
+}
+
+
+/* --------------------------------------------------------------------------
+   HERO
+   -------------------------------------------------------------------------- */
+
+.landing-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 2em 2em 1.75em;
+    margin: 0 auto 1.25em;
+    max-width: 1080px;
+
+    &__portrait {
+        position: absolute;
+        top: 50%;
+        right: 3em;
+        transform: translateY(-50%);
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid var(--global-bg-color);
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18),
+                    0 0 0 1px var(--landing-card-border);
+        z-index: 0;
+
+        @include breakpoint(max-width $large) {
+            width: 200px;
+            height: 200px;
+            right: 1.5em;
+        }
+
+        @include breakpoint(max-width $medium) {
+            position: relative;
+            top: auto;
+            right: auto;
+            transform: none;
+            width: 140px;
+            height: 140px;
+            margin: 0 0 1.5em;
+            display: block;
+        }
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+        max-width: 680px;
+    }
+
+    &__eyebrow {
+        margin: 0 0 0.25em;
+        font-size: $type-size-5;
+        font-weight: 600;
+        color: var(--global-link-color);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    &__name {
+        margin: 0 0 0.15em;
+        font-size: clamp(2rem, 5.5vw, #{$type-size-1});
+        font-weight: 800;
+        line-height: 1.05;
+        color: var(--global-text-color);
+        letter-spacing: -0.02em;
+        border-bottom: none;
+
+        &::after { display: none; }
+    }
+
+    &__role {
+        margin: 0 0 1em;
+        font-size: clamp(1.05rem, 2.6vw, #{$type-size-3});
+        font-weight: 400;
+        color: var(--global-link-color);
+        letter-spacing: 0.01em;
+    }
+
+    &__bio {
+        margin: 0 0 1.75em;
+        font-size: $type-size-4;
+        line-height: 1.65;
+        color: var(--global-text-color);
+        max-width: 580px;
+    }
+
+    &__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75em;
+        align-items: center;
+    }
+
+    &__cta {
+        font-size: $type-size-5;
+        padding: 0.65em 1.45em;
+        border-radius: $border-radius;
+        letter-spacing: 0.01em;
+        transition: $global-transition;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+        }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 2em;
+        right: 2em;
+        height: 1px;
+        background: var(--landing-hero-rule);
+    }
+}
+
+[data-theme="dark"] .landing-hero__portrait {
+    border-color: #3a3a3a;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4),
+                0 0 0 1px #6d757e;
+}
+
+
+/* --------------------------------------------------------------------------
+   NAV SECTION
+   -------------------------------------------------------------------------- */
+
+.landing-nav {
+    padding: 0 2em 2em;
+    max-width: 1080px;
+    margin: 0 auto;
+
+    &__heading {
+        margin: 0 0 1.25em;
+        padding-bottom: 0;
+        font-size: $type-size-6;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--text-muted);
+        border-bottom: none;
+
+        &::after { display: none; }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
+        @include breakpoint($medium) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint($large) {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+        }
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   NAV CARD
+   -------------------------------------------------------------------------- */
+
+.landing-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.9em;
+    padding: 1.25em 1.1em;
+    text-decoration: none;
+    background: var(--landing-card-bg);
+    border: 1px solid var(--landing-card-border);
+    border-radius: #{$border-radius * 2};
+    box-shadow: 0 2px 6px var(--landing-card-shadow);
+    transition: $global-transition;
+
+    @include breakpoint($large) {
+        flex-direction: column;
+        gap: 0.6em;
+        padding: 1.5em 1.25em;
+    }
+
+    &:hover {
+        background: var(--landing-card-bg-hover);
+        border-color: var(--global-link-color);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 18px var(--landing-card-shadow-hover);
+        text-decoration: none;
+
+        .landing-card__icon i {
+            color: var(--global-link-color);
+            transform: scale(1.12);
+        }
+
+        .landing-card__arrow {
+            opacity: 1;
+            transform: translateX(3px);
+        }
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--global-link-color);
+        outline-offset: 3px;
+    }
+
+    &__icon {
+        flex: 0 0 auto;
+
+        i {
+            font-size: 1.7rem;
+            color: var(--landing-card-icon-color);
+            transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+        }
+    }
+
+    &__body {
+        flex: 1 1 auto;
+    }
+
+    &__title {
+        margin: 0 0 0.25em;
+        font-size: $type-size-5;
+        font-weight: 700;
+        color: var(--global-text-color);
+        line-height: 1.2;
+    }
+
+    &__desc {
+        margin: 0;
+        font-size: $type-size-6;
+        line-height: 1.55;
+        color: var(--text-muted);
+    }
+
+    &__arrow {
+        flex: 0 0 auto;
+        align-self: center;
+        color: var(--global-link-color);
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+        font-size: 0.9rem;
+
+        @include breakpoint($large) {
+            display: none;
+        }
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   SPLASH LAYOUT OVERRIDES
+   Neutralize _page.scss h2/h3 border-bottom rules inside the landing content.
+   -------------------------------------------------------------------------- */
+
+.splash .page__content {
+    > .landing-hero,
+    > .landing-nav {
+        h1, h2, h3 {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+    }
+}
+
+/* Disable global sticky-footer gap on the splash landing so the footer
+   sits directly below the nav cards instead of anchoring to viewport bottom. */
+body:has(.splash) {
+    padding-bottom: 0;
+
+    .page__footer {
+        position: static;
+        margin-top: 2em;
+    }
+}

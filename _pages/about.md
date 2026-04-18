@@ -1,9 +1,9 @@
 ---
-permalink: /
-title: "Shang-Yang (Sam) Chen"
+permalink: /about/
+title: "About"
+layout: single
 author_profile: true
-redirect_from: 
-  - /about/
+redirect_from:
   - /about.html
 ---
 
