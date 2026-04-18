@@ -37,6 +37,7 @@
 }
 
 .masthead__menu {
+  position: relative;
 
   ul {
     margin: 0;
@@ -55,5 +56,62 @@
   &--lg {
     padding-right: 2em;
     font-weight: 700;
+  }
+}
+
+/* ==========================================================================
+   THEME TOGGLE BUTTON
+   ========================================================================== */
+
+.theme-toggle {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--global-masthead-link-color);
+  cursor: pointer;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  z-index: 10;
+
+  &:hover {
+    color: var(--global-masthead-link-color-hover);
+    background-color: var(--global-border-color);
+  }
+
+  &:focus {
+    outline: 2px solid var(--global-link-color);
+    outline-offset: 2px;
+  }
+
+  // Sun icon - visible in dark mode (to switch to light)
+  .fa-sun {
+    display: none;
+    font-size: 1.25rem;
+  }
+
+  // Moon icon - visible in light mode (to switch to dark)
+  .fa-moon {
+    display: block;
+    font-size: 1.25rem;
+  }
+}
+
+// When dark mode is active, swap icon visibility
+[data-theme="dark"] .theme-toggle {
+  .fa-sun {
+    display: block;
+  }
+
+  .fa-moon {
+    display: none;
   }
 }
