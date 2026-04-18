@@ -8,8 +8,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 # Install Ruby dependencies
 bundle install
 
-# Serve locally with live reload
-bundle exec jekyll serve -l -H localhost
+# Serve locally with live reload (uses _config.dev.yml to blank site.url so nav links stay local)
+bundle exec jekyll serve -l -H localhost --config _config.yml,_config.dev.yml
 
 # Build for production
 bundle exec jekyll build

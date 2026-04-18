@@ -12,7 +12,84 @@
   {% assign title = post.title %}
 {% endif %}
 
+{% assign is_blog_card = false %}
+{% if include.context == "blog" %}
+  {% assign is_blog_card = true %}
+{% endif %}
+
+{% assign is_portfolio_card = false %}
+{% if include.context == "portfolio" %}
+  {% assign is_portfolio_card = true %}
+{% endif %}
+
 <div class="{{ include.type | default: "list" }}__item">
+  {% if is_blog_card %}
+  <article class="archive__item blog-card" itemscope itemtype="http://schema.org/CreativeWork">
+    <div class="blog-card__header">
+      <h2 class="blog-card__title" itemprop="headline">
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+      </h2>
+      {% if post.date %}
+      <time class="blog-card__date" datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date: "%Y-%m-%d" }}
+      </time>
+      {% endif %}
+    </div>
+
+    {% if post.excerpt %}
+    {% assign clean_excerpt = post.excerpt | markdownify | strip_html | strip | replace: "
+", " " | replace: "  ", " " %}
+    {% if clean_excerpt != "" %}
+    <div class="blog-card__excerpt" itemprop="description">
+      {{ clean_excerpt | truncate: 220 }}
+    </div>
+    {% endif %}
+    {% endif %}
+
+    <div class="blog-card__footer">
+      {% if post.tags[0] %}
+      <div class="blog-card__tags">
+        {% for tag in post.tags %}
+          <span class="tech-chip">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+      <a href="{{ base_path }}{{ post.url }}" class="blog-card__read-link" rel="permalink">Read &#8594;</a>
+    </div>
+  </article>
+
+  {% elsif is_portfolio_card %}
+  <article class="archive__item portfolio-card" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if teaser %}
+    <div class="portfolio-card__image">
+      <img src=
+        {% if teaser contains "://" %}
+          "{{ teaser }}"
+        {% else %}
+          "{{ teaser | prepend: base_path }}"
+        {% endif %}
+        alt="{{ title }}">
+    </div>
+    {% endif %}
+    <div class="portfolio-card__body">
+      <h2 class="portfolio-card__title" itemprop="headline">
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+      </h2>
+      {% if post.excerpt %}
+      {% assign clean_portfolio_excerpt = post.excerpt | markdownify | strip_html | strip %}
+      {% if clean_portfolio_excerpt != "" %}
+      <div class="portfolio-card__excerpt" itemprop="description">
+        {{ clean_portfolio_excerpt | truncate: 200 }}
+      </div>
+      {% endif %}
+      {% endif %}
+      <div class="portfolio-card__footer">
+        <a href="{{ base_path }}{{ post.url }}" class="portfolio-card__read-link" rel="permalink">View &#8594;</a>
+      </div>
+    </div>
+  </article>
+
+  {% else %}
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
@@ -33,7 +110,7 @@
         <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
-    
+
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
@@ -51,7 +128,7 @@
     {% elsif post.excerpt and site.read_more == 'enabled' %}
     <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
     {% endif %}
-    
+
     {% if post.citation and post.paperurl and post.slidesurl %}
       <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a></p>
     {% elsif post.citation and post.paperurl %}
@@ -67,4 +144,5 @@
     {% endif %}
 
   </article>
+  {% endif %}
 </div>

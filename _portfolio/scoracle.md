@@ -1,6 +1,8 @@
 ---
 title: "🔮 scOracle: An AI Assistant for Single-Cell Analysis"
-excerpt: "<img src='/images/scoracle_mermaid.png'> <br/><br/>"
+excerpt: "A RAG-powered chatbot for single-cell analysis, grounded in real package documentation from Scanpy and Seurat to deliver accurate, domain-specific insights."
+header:
+  teaser: /images/scoracle_mermaid.png
 collection: portfolio
 ---
 

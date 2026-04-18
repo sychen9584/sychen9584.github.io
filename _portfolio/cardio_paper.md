@@ -1,6 +1,8 @@
 ---
 title: "Replicating 'Decoding aging in the heart via single cell dual omics of non-cardiomyocytes' in Python 🐍"
-excerpt: "<img src='/images/cardio_paper_abstract.png' width='50%' height='50%'><br/><br/> Figure credits to <a href='https://www.cell.com/iscience/fulltext/S2589-0042(24)02696-8'>Song et al. 2024</a><br/>"
+excerpt: "Replicating single-cell RNA-seq and ATAC-seq analyses from a 2024 aging heart study, translated from R (Seurat/Signac) to Python using the scverse ecosystem (Scanpy, muon)."
+header:
+  teaser: /images/cardio_paper_abstract.png
 collection: portfolio
 ---
 

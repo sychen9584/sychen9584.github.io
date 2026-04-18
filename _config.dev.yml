@@ -1,0 +1,4 @@
+# Local development overrides. Merged on top of _config.yml via:
+#   bundle exec jekyll serve -l -H localhost --config _config.yml,_config.dev.yml
+# Not used by the GitHub Pages build (see .github/workflows/jekyll.yml).
+url: ""

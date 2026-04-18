@@ -1,6 +1,8 @@
 ---
 title: "Miniranger - a lightweight nextflow pipeline for processing scRNA-seq data 🔧"
-excerpt: "<img src='/images/miniranger_flow.png' ><br/>"
+excerpt: "A lightweight Nextflow pipeline for processing scRNA-seq data via simpleaf and the alevin-fry ecosystem. Takes FASTQ files and produces a cell × gene expression matrix and QC report."
+header:
+  teaser: /images/miniranger_flow.png
 collection: portfolio
 ---
 

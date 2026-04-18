@@ -57,4 +57,13 @@ $sidebar-screen-min-width   : 1024px;
     --chip-accent                       : #{$link-light};
     --timeline-rail                     : #6d757e;
     --text-muted                        : #b8bdc2;
+
+    /* Blog card component tokens */
+    --blog-card-bg                      : #525a63;
+    --blog-card-bg-hover                : #5d666f;
+    --blog-card-border                  : #6d757e;
+    --blog-card-accent                  : #{$link};
+    --blog-card-accent-hover            : #{$link-light};
+    --blog-card-shadow                  : rgba(0, 0, 0, 0.2);
+    --blog-card-shadow-hover            : rgba(0, 0, 0, 0.35);
 }

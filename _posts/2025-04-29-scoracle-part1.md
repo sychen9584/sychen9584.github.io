@@ -7,6 +7,7 @@ tags:
   - single-cell
   - ml/ai
   - rag
+excerpt: "AI applications like ChatGPT have acted as capable personal assistants during my single-cell analysis projects, whether helping me debug a Scanpy error at midnight or brainstorming strategies for integrating scRNA and scATAC-seq data."
 ---
 ## Motivation
 AI applications like ChatGPT have acted as capable personal assistants during my single-cell analysis projects, whether helping me debug a Scanpy error at midnight or brainstorming strategies for integrating scRNA and scATAC-seq data. 

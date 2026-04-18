@@ -7,6 +7,7 @@ tags:
   - single-cell
   - ml/ai
   - rag
+excerpt: "For a minimum viable product (MVP), I limited document ingestion to Scanpy, a leading Python-based framework for analyzing scRNA-seq data."
 ---
 
 ## Download Scanpy source code & documentation

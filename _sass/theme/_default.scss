@@ -50,4 +50,13 @@ $sidebar-screen-min-width   : 1024px;
     --chip-accent                       : #{$info-color};
     --timeline-rail                     : #c4cad0;
     --text-muted                        : #6a7075;
+
+    /* Blog card component tokens */
+    --blog-card-bg                      : #f7f9fa;
+    --blog-card-bg-hover                : #f0f4f6;
+    --blog-card-border                  : #c4cad0;
+    --blog-card-accent                  : #{$info-color};
+    --blog-card-accent-hover            : #225f6e;
+    --blog-card-shadow                  : rgba(0, 0, 0, 0.06);
+    --blog-card-shadow-hover            : rgba(0, 0, 0, 0.12);
 }

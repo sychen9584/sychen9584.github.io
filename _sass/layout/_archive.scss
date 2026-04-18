@@ -243,3 +243,242 @@
     }
   }
 }
+
+
+/*
+   Blog card (list view, year-archive only)
+   ========================================================================== */
+
+/* Year section header — editorial magazine style */
+.archive__subtitle--year {
+  font-size: $type-size-3;
+  font-weight: 700;
+  color: var(--global-text-color);
+  border-bottom: 2px solid var(--blog-card-accent);
+  padding-bottom: 0.35em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  letter-spacing: -0.01em;
+}
+
+/* Card container */
+.blog-card {
+  display: block;
+  margin-bottom: 1.25em;
+  padding: 1.1em 1.25em;
+  background: var(--blog-card-bg);
+  border-left: 3px solid var(--blog-card-accent);
+  border-radius: 0 $border-radius $border-radius 0;
+  box-shadow: 0 1px 3px var(--blog-card-shadow);
+  transition: $global-transition;
+
+  &:hover {
+    background: var(--blog-card-bg-hover);
+    border-left-color: var(--blog-card-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--blog-card-shadow-hover);
+
+    .blog-card__title a {
+      color: var(--global-link-color);
+    }
+  }
+}
+
+/* Header row: title + date side by side */
+.blog-card__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.25em 1em;
+  margin-bottom: 0.6em;
+}
+
+.blog-card__title {
+  flex: 1 1 auto;
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+  font-size: $type-size-4;
+  font-weight: 700;
+  line-height: 1.25;
+  font-family: $sans-serif;
+
+  a {
+    color: var(--global-text-color);
+    text-decoration: none;
+    background-image: none;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--global-link-color);
+      text-decoration: none;
+    }
+  }
+}
+
+.blog-card__date {
+  flex: 0 0 auto;
+  font-family: $monospace;
+  font-size: 0.82em;
+  color: var(--text-muted);
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+/* Excerpt */
+.blog-card__excerpt {
+  font-size: $type-size-6;
+  line-height: 1.6;
+  color: var(--global-text-color);
+  margin-bottom: 0.85em;
+
+  p { margin: 0; }
+}
+
+/* Footer row: chips + read link */
+.blog-card__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+  margin-top: 0.1em;
+}
+
+.blog-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35em;
+}
+
+.blog-card__read-link {
+  flex: 0 0 auto;
+  font-size: 0.88em;
+  font-weight: 600;
+  color: var(--blog-card-accent);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  margin-left: auto;
+
+  &:hover {
+    color: var(--blog-card-accent-hover);
+    text-decoration: none;
+    transform: translateX(2px);
+  }
+}
+
+/* Mobile: stack date below title */
+@include breakpoint(max-width $small) {
+  .blog-card__header {
+    flex-direction: column;
+    gap: 0.2em;
+  }
+
+  .blog-card__date {
+    align-self: flex-start;
+  }
+}
+
+
+/*
+   Portfolio card (project listing page)
+   ========================================================================== */
+
+.portfolio-card {
+  display: block;
+  margin-bottom: 1.5em;
+  background: var(--blog-card-bg);
+  border-left: 3px solid var(--blog-card-accent);
+  border-radius: 0 $border-radius $border-radius 0;
+  box-shadow: 0 1px 3px var(--blog-card-shadow);
+  overflow: hidden;
+  transition: $global-transition;
+
+  &:hover {
+    background: var(--blog-card-bg-hover);
+    border-left-color: var(--blog-card-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--blog-card-shadow-hover);
+
+    .portfolio-card__image img {
+      transform: scale(1.03);
+    }
+
+    .portfolio-card__title a {
+      color: var(--global-link-color);
+    }
+  }
+}
+
+/* Full-bleed image banner at top of card */
+.portfolio-card__image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: transform 0.35s ease;
+  }
+}
+
+/* Content area below image */
+.portfolio-card__body {
+  padding: 1.1em 1.25em;
+}
+
+.portfolio-card__title {
+  margin: 0 0 0.5em;
+  padding: 0;
+  border-bottom: none;
+  font-size: $type-size-4;
+  font-weight: 700;
+  line-height: 1.25;
+  font-family: $sans-serif;
+
+  a {
+    color: var(--global-text-color);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--global-link-color);
+      text-decoration: none;
+    }
+  }
+}
+
+.portfolio-card__excerpt {
+  font-size: $type-size-6;
+  line-height: 1.6;
+  color: var(--global-text-color);
+  margin-bottom: 0.85em;
+
+  p { margin: 0; }
+}
+
+.portfolio-card__footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.portfolio-card__read-link {
+  font-size: 0.88em;
+  font-weight: 600;
+  color: var(--blog-card-accent);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--blog-card-accent-hover);
+    text-decoration: none;
+    transform: translateX(2px);
+  }
+}
